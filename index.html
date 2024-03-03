@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>Form đăng kí</h1>
-    <form>
-        <input type="text" name="name" placeholder="Họ và tên" id = "name" required><br><br>
-        <input type="email" name="email" placeholder="Email" id = "email" required><br><br>
-        <input type="text" name="psw" placeholder="Mật khẩu" id ="pws" required><br><br>
+    <form id="formDK" onsubmit="return validateForm()">
+        <input type="text" name="name" placeholder="Họ và tên" id = "name" onblur="validateName()"><br><br>
+        <input type="email" name="email" placeholder="Email" id = "email" onblur="validateEmail()"><br><br>
+        <input type="text" name="psw" placeholder="Mật khẩu" id ="pws" onblur="validatePws()"><br><br>
         <input type="submit" value="Đăng kí" id="submit">
     </form>
     <script src="./main.js"></script>
