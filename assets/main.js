@@ -14,7 +14,11 @@ function validateName(){
 }
 
 function validateEmail(){
-    if(userEmail.value === ""){
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if(!emailPattern.test(userEmail.value)){
+        userEmail.classList.add("loi")
+        return false
+    }else if(userEmail.value === ""){
         userEmail.classList.add("loi")
         return false
     }else{
